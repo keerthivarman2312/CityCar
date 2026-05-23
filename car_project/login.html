@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="logincss.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <!-- box icons -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <!-- remixicons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <!-- googlefonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+
+</head>
+<style>
+  /* Global Styles */
+:root {
+    --h1-font: 4rem;
+    --h2-font: 3.5rem;
+    --p-font: 1.1rem;
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --main-color: #ffee02;
+    --other-color: #727272;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./Images/login1.jpg');
+    background-blend-mode:initial;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+   }
+   header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000; 
+    display: static;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent; 
+    padding: 25px 10%;
+    transition: all .7s ease;
+    background-color:black;
+}
+.logo img {
+    width: 200px;
+    height: auto;
+    padding-left: 100px;
+    
+} 
+
+.navlinks a {
+    display:inline-block;
+    margin: 0 20px;
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--bg-color);
+    transition: all .7s ease;
+   
+}
+
+.navlinks a:hover {
+    color: var(--main-color);
+}
+
+.h-right {
+    display: flex;
+    align-items: center;
+}
+
+.h-btn {
+    display: inline-block;
+    font-size: 16px;
+    padding: 18px 60px 15px 40px;
+    font-weight: 700;
+    color: var(--text-color);
+    background: var(--main-color);
+    border-radius: 20px 0;
+    margin: 0 30px;
+    transition: all .7s ease;
+}
+
+.h-btn:hover {
+    border-radius: 0 20px 0 0;
+    background: var(--bg-color);
+}
+
+.h-right i {
+    font-size: 24px;
+    color: var(--bg-color);
+    cursor: pointer;
+    transition: all .7s ease;
+}
+
+.h-right i:hover {
+    transform: scale(1.1);
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 40px;
+    z-index: 10001;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+  .container {
+    background-color: black;
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  h2 {
+    color: yellow;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-size: 14px;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: yellow;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  button:hover {
+    background-color: greenyellow;
+    color:white;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #4CAF50;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+</style>
+
+<body>
+  <header>
+    <a href="index.html" class="logo">
+        <img src="logoo.png" alt="logoimg">
+    </a>
+    <ul class="navlinks">
+        <a href="../index.html?#home">Home</a>
+        <a href="../index.html?#about">About us</a>
+        <a href="../index.html?#services">services</a>
+        <a href="../index.html?#latestfeatures">latest features</a>
+        <a href="./index.html?#contact">contact</a>
+    </ul>
+    <div class="h-right">
+        <a href="#"><i class="ri-search-line"></i></a>
+        <a href="/Login/login.html" class="h-btn">Book Now</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </div>
+</header>
+  <div class="container">
+    <h2>Login</h2>
+    <form action="/login" method="POST">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <button type="submit"> <a href="booking.html"></a>Login</button>
+     <div>
+       -----
+     </div>
+      <p>If don't have an account? <a href="reg.html">Register here</a></p>
+    </form>
+  </div>
+
+</body>
+
+</html>

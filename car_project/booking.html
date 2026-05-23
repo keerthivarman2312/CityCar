@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>carbooking</title>
+  <link rel="stylesheet" href="logincss.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <!-- box icons -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <!-- remixicons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <!-- googlefonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+    --h1-font: 4rem;
+    --h2-font: 3.5rem;
+    --p-font: 1.1rem;
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --main-color: #ffee02;
+    --other-color: #727272;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000; 
+    display: static;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent; 
+    padding: 25px 10%;
+    transition: all .7s ease;
+    background-color:black;
+}
+.logo img {
+    width: 200px;
+    height: auto;
+    padding-left: 50px;
+    
+} 
+
+.navlinks a {
+    display:inline-block;
+    margin: 0 20px;
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--bg-color);
+    transition: all .7s ease;
+   
+}
+
+.navlinks a:hover {
+    color: var(--main-color);
+}
+
+.h-right {
+    display: flex;
+    align-items: center;
+}
+
+.h-btn {
+    display: inline-block;
+    font-size: 16px;
+    padding: 18px 60px 15px 40px;
+    font-weight: 700;
+    color: var(--text-color);
+    background: var(--main-color);
+    border-radius: 20px 0;
+    margin: 0 30px;
+    transition: all .7s ease;
+}
+
+.h-btn:hover {
+    border-radius: 0 20px 0 0;
+    background: var(--bg-color);
+}
+
+.h-right i {
+    font-size: 24px;
+    color: var(--bg-color);
+    cursor: pointer;
+    transition: all .7s ease;
+}
+
+.h-right i:hover {
+    transform: scale(1.1);
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 40px;
+    z-index: 10001;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #e9f0f7;
+      margin: 0;
+      padding: 0;
+      background-image: url(./Images/W4.jpeg);
+      background-blend-mode:soft-light;
+      background-blend-mode:initial;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+     
+
+    }
+    .container {
+    
+      width: 450px;
+      margin: 40px auto;
+      background:burlywood;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+    select, input[type="number"], input[type="date"], input[type="time"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #848d05;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #00b315;
+      color: #000000;
+    }
+    .result {
+      margin-top: 15px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .boxfull{
+      margin-left: 40%;
+      margin-top: 10%;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+        <img src="logoo.png" alt="logoimg">
+    </a>
+    <ul class="navlinks">
+        <a href="../index.html?#home">Home</a>
+        <a href="../index.html?#about">About us</a>
+        <a href="../index.html?#services">services</a>
+        <a href="../index.html?#latestfeatures">latest features</a>
+        <a href="./index.html?#contact">contact</a>
+    </ul>
+    <div class="h-right">
+        <a href="#"><i class="ri-search-line"></i></a>
+        <a href="/Login/login.html" class="h-btn">Book Now</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </div>
+</header>
+
+<div class="boxfull">
+<div class="container">
+  <h2>Taxi Booking Form</h2>
+  <form id="bookingForm">
+    <label for="pickup">Pickup Location:</label>
+    <select id="pickup" required>
+      <option value="" disabled selected>Select city</option>
+      <option>Chennai</option>
+      <option>salem</option>
+      <option>madurai</option>
+      <option>Coimbatore</option>
+      <option>Tiruchirappalli</option>
+    </select>
+
+    <label for="drop">Drop Location:</label>
+    <select id="drop" required>
+      <option value="" disabled selected>Select city</option>
+      <option>Chennai</option>
+      <option>Salem</option>
+      <option>Madurai</option>
+      <option>Coimbatore</option>
+      <option>Tiruchirappalli</option>
+    </select>
+
+    <label for="cabType">Car Type:</label>
+    <select id="cabType" required>
+      <option value="" disabled selected>Select cab</option>
+      <option value="10">Sedan – ₹50/km</option>
+      <option value="15">SUV – ₹100/km</option>
+      <option value="8">Mini – ₹150/km</option>
+    </select>
+
+    <label for="distance">Distance (km):</label>
+    <input type="number" id="distance" placeholder="Enter distance" required>
+
+    <label for="date">Pickup Date:</label>
+    <input type="date" id="date" required>
+
+    <label for="time">Pickup Time:</label>
+    <input type="time" id="time" required>
+
+    <button type="button" onclick="calculateFare()">Calculate Fare</button>
+    <div class="result" id="fareResult"></div>
+    
+    <button type="button" onclick="bookNow()">Book Now</button>
+  </form>
+</div>
+
+<script>
+  function calculateFare() {
+    const pickup = document.getElementById("pickup").value;
+    const drop = document.getElementById("drop").value;
+    const distance = parseFloat(document.getElementById("distance").value);
+    const rate = parseFloat(document.getElementById("cabType").value);
+
+    if (!pickup || !drop || pickup === drop) {
+      document.getElementById("fareResult").textContent = "Select valid pickup and drop locations.";
+      return;
+    }
+
+    if (isNaN(distance) || distance <= 0 || isNaN(rate)) {
+      document.getElementById("fareResult").textContent = "Please enter valid distance and cab type.";
+      return;
+    }
+
+    const fare = distance * rate;
+    document.getElementById("fareResult").textContent =
+      `Fare from ${pickup} to ${drop}: ₹${fare.toFixed(2)} (${distance} km @ ₹${rate}/km)`;
+  }
+
+  function bookNow() {
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+
+    if (!date || !time) {
+      alert("Please select a valid date and time for pickup.");
+      return;
+    }
+
+    alert("Your taxi has been booked! We’ll pick you up on " + date + " at " + time + ".");
+  }
+</script>
+</div>
+</body>
+</html>
